@@ -47,7 +47,7 @@
     color: var(--ink);
     font-family: var(--body);
     font-weight: 400;
-    line-height: 1.6;
+    line-height: 1.5;
     overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
     font-size: 15px;
@@ -326,7 +326,7 @@
     font-family: var(--serif);
     font-size: 24px;
     font-weight: 400;
-    line-height: 1.45;
+    line-height: 1.32;
     color: var(--ink);
     letter-spacing: -0.01em;
   }
@@ -657,10 +657,10 @@
     border-color: var(--card-color);
     box-shadow: 0 20px 40px rgba(11,11,11,0.06);
   }
-  .eco-card-1 { --card-color: var(--petrol); }
-  .eco-card-2 { --card-color: var(--coral); }
-  .eco-card-3 { --card-color: var(--ink); }
-  .eco-card-4 { --card-color: var(--petrol-l); }
+  .eco-card-1 { --card-color: #119BB0; }
+  .eco-card-2 { --card-color: #C98A12; }
+  .eco-card-3 { --card-color: #3DA04A; }
+  .eco-card-4 { --card-color: var(--coral); }
 
   .eco-head {
     display: flex; justify-content: space-between; align-items: flex-start;
@@ -752,7 +752,7 @@
   }
 
   .time-grid {
-    display: grid; grid-template-columns: repeat(4, 1fr);
+    display: grid; grid-template-columns: repeat(3, 1fr);
     gap: 20px;
   }
   .pessoa {
@@ -1170,12 +1170,16 @@
   .gc.hit{color:var(--ink);background:var(--coral);border-color:var(--coral)}
   .game-prize[hidden]{display:none}
   .game-prize{position:fixed;inset:0;background:rgba(10,42,40,.86);backdrop-filter:blur(8px);display:flex;align-items:center;justify-content:center;z-index:200;padding:24px}
-  .game-prize-card{background:var(--bone);color:var(--ink);max-width:460px;width:100%;border-radius:14px;padding:44px 36px;text-align:center;border-top:5px solid var(--coral);animation:veloIn .5s var(--ease) both}
+  .game-prize-card{background:var(--bone);color:var(--ink);max-width:460px;width:100%;border-radius:14px;padding:44px 36px;position:relative;text-align:center;border-top:5px solid var(--coral);animation:veloIn .5s var(--ease) both}
   .gp-mono{font-family:var(--mono);font-size:10px;letter-spacing:.2em;color:var(--coral);text-transform:uppercase;margin-bottom:16px}
   .game-prize-card h3{font-family:var(--head);font-size:30px;font-weight:700;letter-spacing:-.03em;margin-bottom:14px;line-height:1.05;color:var(--ink)}
   .game-prize-card p{font-size:15px;color:var(--ink-soft);line-height:1.6;margin-bottom:28px}
   .game-prize-card .btn-primary{justify-content:center;width:100%}
   @media(max-width:768px){#desafio{padding:90px 20px}.game-stage{padding:22px}.velo-marquee span{font-size:16px}.ghv{font-size:17px}.speedo-scale{font-size:7px}}
+  .eco-brand-chip{display:inline-flex;align-items:center;background:var(--ink);border-radius:9px;padding:7px 13px;margin-bottom:16px;align-self:flex-start}
+  .eco-brand-chip img{height:20px;width:auto;display:block}
+  .gp-close{position:absolute;top:12px;right:16px;background:none;border:0;font-size:26px;line-height:1;color:var(--stone);cursor:pointer;z-index:2;padding:4px}
+  .gp-close:hover{color:var(--ink)}
 </style>
 </head>
 <body>
@@ -1213,14 +1217,14 @@
     </div>
 
     <h1 class="hero-headline">
-      Logística é a arte de<br>
+      Velocidade é a arte de<br>
       <span class="coral">cumprir</span> o que foi<br>
       <span class="petrol">combinado</span>.
     </h1>
 
     <div class="hero-bottom">
       <p class="hero-lede">
-        Quatro empresas. Quatro mercados. <strong>Um único código de execução.</strong> Distribuição veterinária, varejo pet, hortifruti e mentoria comercial — todas sob o padrão de cuidado que chamamos de <strong>O Protocolo</strong>. O método ficou tão bom que virou produto: nasceu <strong>O Protocolo Comercial</strong>, a nossa quarta empresa.
+        Quatro empresas. Quatro mercados. <strong>Um único código de execução.</strong> Distribuição veterinária, varejo pet, distribuição de hortifruti e mentoria comercial — todas sob o padrão de cuidado que chamamos de <strong>O Protocolo</strong>. O método ficou tão bom que virou produto: nasceu <strong>O Protocolo Comercial</strong>, a nossa quarta empresa.
       </p>
       <div class="hero-actions">
         <a href="#ecossistema" class="btn-primary">
@@ -1241,8 +1245,8 @@
       <div class="stat-label">Empresas operando sob o mesmo código</div>
     </div>
     <div class="stat reveal">
-      <div class="stat-num">10k<sup>+</sup></div>
-      <div class="stat-label">Pedidos processados por mês entre as quatro frentes</div>
+      <div class="stat-num">140k<sup>+</sup></div>
+      <div class="stat-label">Pedidos processados desde a fundação</div>
     </div>
     <div class="stat reveal">
       <div class="stat-num">99<sup>%</sup></div>
@@ -1278,11 +1282,11 @@
     </aside>
 
     <div class="manifesto-body reveal">
-      <p>O Grupo Velo nasceu de uma convicção: a de que logística é muito mais do que <em>mover volumes</em>. É o momento exato onde a confiança depositada se materializa. É a <strong>ponte final entre a expectativa e a entrega real.</strong></p>
+      <p>O Grupo Velo nasceu de uma convicção: a de que velocidade é muito mais do que <em>mover volumes</em>. É o momento exato onde a confiança depositada se materializa. É a <strong>ponte final entre a expectativa e a entrega real.</strong></p>
 
       <p>Quando fundei o grupo, a premissa era simples: tratar cada entrega com o mesmo nível de urgência e respeito que nossos clientes têm com seus próprios negócios. Entendemos que os fundamentos de uma boa operação são universais. Pontualidade, integridade do produto e transparência na comunicação são valores inegociáveis.</p>
 
-      <p>Mais do que uma estrutura administrativa, somos um <strong>grupo operacional</strong>. Atuamos em quatro frentes — distribuição veterinária, varejo pet, hortifruti e mentoria comercial — e todas seguem o mesmo guia de excelência: o <em>Protocolo</em>. Ele define nosso padrão de qualidade e nossa cultura de responsabilidade, focada sempre em quem está na ponta.</p>
+      <p>Mais do que uma estrutura administrativa, somos um <strong>grupo operacional</strong>. Atuamos em quatro frentes — distribuição veterinária, varejo pet, distribuição de hortifruti e mentoria comercial — e todas seguem o mesmo guia de excelência: o <em>Protocolo</em>. Ele define nosso padrão de qualidade e nossa cultura de responsabilidade, focada sempre em quem está na ponta.</p>
 
       <p>Nosso desafio não é apenas crescer, mas <em>evoluir mantendo a essência do Protocolo intacta</em>. Quando o cliente recebe bem, a logística se torna invisível e o negócio dele prospera. É por isso que trabalhamos todos os dias. E foi esse mesmo método que, levado ao mercado, virou nossa quarta empresa: <em>O Protocolo Comercial</em>.</p>
       
@@ -1435,13 +1439,14 @@
     <div class="eco-grid">
       <!-- DeliVet -->
       <article class="eco-card eco-card-1 reveal">
+        <div class="eco-brand-chip"><img src="assets/brands/delivet.png" alt="DeliVet"></div>
         <div class="eco-head">
           <span class="eco-index">Empresa 01</span>
           <span class="eco-model">B2B · Distribuição</span>
         </div>
         <h3 class="eco-name">DeliVet</h3>
-        <p class="eco-tagline">Distribuição veterinária com marca própria e catálogo curado.</p>
-        <p class="eco-desc">Atende pet shops, clínicas e revendedores com mais de 100 produtos catalogados, ficha técnica em cada item e identidade visual construída do zero pelo grupo.</p>
+        <p class="eco-tagline">Distribuição veterinária com produtos exclusivos e catálogo curado.</p>
+        <p class="eco-desc">Atende pet shops, clínicas e revendedores com mais de 600 produtos catalogados, ficha técnica em cada item e identidade visual construída do zero pelo grupo.</p>
         <div class="eco-meta">
           <div class="eco-meta-item">
             <span class="eco-meta-label">Público</span>
@@ -1449,7 +1454,7 @@
           </div>
           <div class="eco-meta-item">
             <span class="eco-meta-label">Portfólio</span>
-            <span class="eco-meta-value">100+ produtos</span>
+            <span class="eco-meta-value">600+ produtos</span>
           </div>
           <div class="eco-meta-item">
             <span class="eco-meta-label">Categorias</span>
@@ -1467,13 +1472,14 @@
 
       <!-- Melhor Amigo -->
       <article class="eco-card eco-card-2 reveal">
+        <div class="eco-brand-chip"><img src="assets/brands/aumigo.png" alt="Melhor Aumigo"></div>
         <div class="eco-head">
           <span class="eco-index">Empresa 02</span>
           <span class="eco-model">B2C · Varejo</span>
         </div>
         <h3 class="eco-name">Melhor Aumigo</h3>
         <p class="eco-tagline">Varejo pet que fecha o ciclo da operação do grupo.</p>
-        <p class="eco-desc">Pet shop físico e digital com curadoria de produtos premium, serviços veterinários integrados e atendimento consultivo — sem pressa e sem script.</p>
+        <p class="eco-desc">Pet shop físico e digital com banho & tosa, estética e venda de produtos premium com curadoria — atendimento consultivo, sem pressa e sem script.</p>
         <div class="eco-meta">
           <div class="eco-meta-item">
             <span class="eco-meta-label">Público</span>
@@ -1485,7 +1491,7 @@
           </div>
           <div class="eco-meta-item">
             <span class="eco-meta-label">Serviços</span>
-            <span class="eco-meta-value">Vet e estética</span>
+            <span class="eco-meta-value">Estética e produtos</span>
           </div>
           <div class="eco-meta-item">
             <span class="eco-meta-label">Diferencial</span>
@@ -1499,17 +1505,18 @@
 
       <!-- Tá na Porta -->
       <article class="eco-card eco-card-3 reveal">
+        <div class="eco-brand-chip"><img src="assets/brands/tanaporta.png" alt="TáNaPorta"></div>
         <div class="eco-head">
           <span class="eco-index">Empresa 03</span>
           <span class="eco-model">B2B · Delivery</span>
         </div>
         <h3 class="eco-name">TáNaPorta</h3>
-        <p class="eco-tagline">Hortifruti para restaurantes com entrega no dia seguinte.</p>
-        <p class="eco-desc">Delivery B2B de frutas, legumes, folhagens e ovos para cozinhas profissionais em Brasília. Frete grátis acima de R$100 e atendimento operando seis dias por semana.</p>
+        <p class="eco-tagline">Delivery de hortifruti para restaurantes, hotéis, escolas e mais.</p>
+        <p class="eco-desc">Delivery B2B de hortifruti para restaurantes, hotéis, escolas, lanchonetes, hospitais e outros. Frete sempre grátis e atendimento operando seis dias por semana.</p>
         <div class="eco-meta">
           <div class="eco-meta-item">
             <span class="eco-meta-label">Público</span>
-            <span class="eco-meta-value">Restaurantes e empresas</span>
+            <span class="eco-meta-value">Restaurantes, hotéis, escolas, hospitais…</span>
           </div>
           <div class="eco-meta-item">
             <span class="eco-meta-label">Cobertura</span>
@@ -1531,6 +1538,7 @@
 
       <!-- O Protocolo Comercial — 4ª empresa (o método virou produto) -->
       <article class="eco-card eco-card-4 reveal">
+        <div class="eco-brand-chip"><img src="assets/brands/protocolo.png" alt="O Protocolo Comercial"></div>
         <div class="eco-head">
           <span class="eco-index">Empresa 04</span>
           <span class="eco-model">B2B · Mentoria</span>
@@ -1604,6 +1612,7 @@
 
   <div class="game-prize" id="g-prize" hidden>
     <div class="game-prize-card">
+      <button class="gp-close" id="gpClose" aria-label="Fechar">×</button>
       <div class="gp-mono">Protocolo · Código 001</div>
       <h3 id="gp-title">Você domina O Protocolo. 🏁</h3>
       <p id="gp-text"></p>
@@ -1629,35 +1638,51 @@
 
     <div class="time-grid">
       <div class="pessoa reveal">
-        <div class="pessoa-foto"><span class="pessoa-inicial">M</span></div>
+        <div class="pessoa-foto"><span class="pessoa-inicial">B</span></div>
         <div class="pessoa-info">
-          <div class="pessoa-nome">Mariana Ribeiro</div>
-          <div class="pessoa-cargo">Operações · DeliVet</div>
-          <p class="pessoa-bio">Responsável pela gestão de catálogo, relação com fornecedores e controle de qualidade dos produtos distribuídos.</p>
+          <div class="pessoa-nome">Bianca</div>
+          <div class="pessoa-cargo">CEO · TáNaPorta Valparaíso</div>
+          <p class="pessoa-bio">Lidera a estratégia e o crescimento da operação da TáNaPorta em Valparaíso.</p>
         </div>
       </div>
       <div class="pessoa reveal">
-        <div class="pessoa-foto" style="background: var(--ink-2);"><span class="pessoa-inicial">J</span></div>
+        <div class="pessoa-foto" style="background: var(--ink-2);"><span class="pessoa-inicial">S</span></div>
         <div class="pessoa-info">
-          <div class="pessoa-nome">João Pedro Alves</div>
-          <div class="pessoa-cargo">Logística · TáNaPorta</div>
-          <p class="pessoa-bio">Coordena roteirização, compra no CEASA e o SLA de 24h de entrega para mais de 200 cozinhas em Brasília.</p>
+          <div class="pessoa-nome">Silvio</div>
+          <div class="pessoa-cargo">COO · TáNaPorta Valparaíso</div>
+          <p class="pessoa-bio">Responsável pela operação e pela execução do dia a dia da TáNaPorta em Valparaíso.</p>
+        </div>
+      </div>
+      <div class="pessoa reveal">
+        <div class="pessoa-foto" style="background: var(--petrol-l);"><span class="pessoa-inicial">S</span></div>
+        <div class="pessoa-info">
+          <div class="pessoa-nome">Sheila</div>
+          <div class="pessoa-cargo">Gerente Financeira · Grupo Velo</div>
+          <p class="pessoa-bio">Cuida da saúde financeira e do controle de todas as empresas do grupo.</p>
         </div>
       </div>
       <div class="pessoa reveal">
         <div class="pessoa-foto" style="background: var(--coral-d);"><span class="pessoa-inicial">C</span></div>
         <div class="pessoa-info">
-          <div class="pessoa-nome">Camila Souza</div>
-          <div class="pessoa-cargo">Atendimento · Melhor Aumigo</div>
-          <p class="pessoa-bio">Lidera o atendimento consultivo da loja e o relacionamento com tutores — do primeiro contato ao pós-venda.</p>
+          <div class="pessoa-nome">Cláudio</div>
+          <div class="pessoa-cargo">Supervisor Comercial · TáNaPorta</div>
+          <p class="pessoa-bio">Conduz o time comercial e a relação com os clientes da TáNaPorta.</p>
         </div>
       </div>
       <div class="pessoa reveal">
-        <div class="pessoa-foto" style="background: var(--petrol-l);"><span class="pessoa-inicial">R</span></div>
+        <div class="pessoa-foto" style="background: var(--ink-2);"><span class="pessoa-inicial">S</span></div>
         <div class="pessoa-info">
-          <div class="pessoa-nome">Rafa Rujo</div>
-          <div class="pessoa-cargo">Design · Grupo Velo</div>
-          <p class="pessoa-bio">Responsável pela identidade visual, catálogos e comunicação de todas as quatro empresas do grupo.</p>
+          <div class="pessoa-nome">Silmária</div>
+          <div class="pessoa-cargo">Analista de RH · Grupo Velo</div>
+          <p class="pessoa-bio">Cuida das pessoas: seleção, desenvolvimento e cultura nas empresas do grupo.</p>
+        </div>
+      </div>
+      <div class="pessoa reveal">
+        <div class="pessoa-foto" style="background: var(--petrol-l);"><span class="pessoa-inicial">C</span></div>
+        <div class="pessoa-info">
+          <div class="pessoa-nome">Carlos Henrique</div>
+          <div class="pessoa-cargo">Gerente Operacional · Grupo Velo</div>
+          <p class="pessoa-bio">Garante que a operação das quatro empresas rode com padrão e previsibilidade.</p>
         </div>
       </div>
     </div>
@@ -1717,53 +1742,7 @@
   </div>
 </section>
 
-<!-- ═══════════════ PRINCÍPIOS ═══════════════ -->
-<section id="principios">
-  <div class="princ-inner">
-    <div class="princ-header">
-      <div class="reveal">
-        <div class="eyebrow">Princípios de conduta</div>
-        <h2 class="section-title">O que <strong>não flexiona</strong>,<br>independente da vertical.</h2>
-      </div>
-      <p class="section-sub reveal">
-        Seis princípios que operam como sistema imunológico do grupo — orientam contratação, decisão e resolução de conflito.
-      </p>
-    </div>
 
-    <div class="princ-grid">
-      <div class="princ reveal">
-        <div class="princ-num">P / 01</div>
-        <h3>Honestidade <strong>antes</strong> de eficiência.</h3>
-        <p>Quando velocidade e verdade entram em conflito, verdade ganha. Prazo realista vale mais que prazo otimista.</p>
-      </div>
-      <div class="princ reveal">
-        <div class="princ-num">P / 02</div>
-        <h3>Escala com <strong>controle</strong>.</h3>
-        <p>Crescemos no ritmo em que conseguimos manter o padrão. Volume sem qualidade é dívida disfarçada.</p>
-      </div>
-      <div class="princ reveal">
-        <div class="princ-num">P / 03</div>
-        <h3>Ponta é <strong>a prova</strong>.</h3>
-        <p>Todo processo interno só vale se aparece positivamente na experiencial do cliente final. O resto é burocracia.</p>
-      </div>
-      <div class="princ reveal">
-        <div class="princ-num">P / 04</div>
-        <h3>Time <strong>primeiro</strong>.</h3>
-        <p>Condições decentes de trabalho não são custo — são infraestrutura. Time mal tratado entrega operação mal feita.</p>
-      </div>
-      <div class="princ reveal">
-        <div class="princ-num">P / 05</div>
-        <h3>Decisão <strong>próxima</strong> da execução.</h3>
-        <p>Quem executa tem autonomia pra decidir. Hierarquia lenta derrota cliente rápido.</p>
-      </div>
-      <div class="princ reveal">
-        <div class="princ-num">P / 06</div>
-        <h3>Cada vertical <strong>defende</strong> as outras.</h3>
-        <p>Um grupo é grupo quando cada operação carrega a reputação das demais. Não existe sucesso isolado aqui.</p>
-      </div>
-    </div>
-  </div>
-</section>
 
 <!-- ═══════════════ CTA FINAL ═══════════════ -->
 <section id="cta">
@@ -1832,7 +1811,6 @@
         <ul>
           <li><a href="#manifesto">Manifesto</a></li>
           <li><a href="#protocolo">O Protocolo</a></li>
-          <li><a href="#principios">Princípios</a></li>
         </ul>
       </div>
     </div>
@@ -1939,6 +1917,8 @@
     }
     reset.addEventListener('click',()=>{round=0;score=0;hits=0;scoreEl.textContent='0';document.querySelectorAll('.gc').forEach(g=>g.classList.remove('hit'));reset.hidden=true;act.hidden=false;prize.hidden=true;setupRound();});
     document.getElementById('gp-cta').addEventListener('click',()=>{prize.hidden=true;});
+    document.getElementById('gpClose').addEventListener('click',()=>{prize.hidden=true;});
+    prize.addEventListener('click',e=>{if(e.target===prize)prize.hidden=true;});
     setupRound();
   })();
 </script>
