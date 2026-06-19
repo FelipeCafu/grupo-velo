@@ -1183,9 +1183,15 @@
   .gp-close:hover{color:var(--ink)}
 
   .nav-logo{position:relative}
-  .nav-truck{position:absolute;left:0;top:0;color:#E8553B;offset-path:path('M 45 -11 L 45 32 L 62 32 A 8 8 0 0 0 62 16 A 8 8 0 0 0 62 32 L 78 32');offset-rotate:auto;offset-distance:0%;animation:navTruck 20s linear infinite;pointer-events:none;z-index:2}
+  .nav-truck{position:absolute;left:0;top:0;color:#E8553B;offset-path:path('M 45 -11 L 45 32 L 62 32 A 8 8 0 0 0 62 16 A 8 8 0 0 0 62 32 L 78 32');offset-rotate:auto;offset-distance:0%;animation:navTruck 8s linear infinite;pointer-events:none;z-index:2}
   .nav-truck svg{display:block;filter:drop-shadow(0 0 2px rgba(232,85,59,.85))}
-  @keyframes navTruck{0%{offset-distance:0%;opacity:0}1.5%{opacity:1}16%{offset-distance:100%;opacity:1}18%{offset-distance:100%;opacity:0}100%{offset-distance:100%;opacity:0}}
+  @keyframes navTruck{0%{offset-distance:0%;opacity:0}4%{opacity:1}34%{offset-distance:100%;opacity:1}39%{offset-distance:100%;opacity:0}100%{offset-distance:100%;opacity:0}}
+  .cta-left .velo-logo,.footer-brand .velo-logo{position:relative}
+  .cta-truck,.foot-truck{position:absolute;left:0;top:0;color:#E8553B;offset-rotate:auto;offset-distance:0%;animation:navTruck 8s linear infinite;pointer-events:none;z-index:2}
+  .cta-truck{offset-path:path('M 113 -24 L 113 81 L 155 81 A 20 20 0 0 0 155 41 A 20 20 0 0 0 155 81 L 246 81')}
+  .foot-truck{offset-path:path('M 75 -16 L 75 54 L 103 54 A 13 13 0 0 0 103 27 A 13 13 0 0 0 103 54 L 164 54')}
+  .cta-truck svg,.foot-truck svg{display:block;filter:drop-shadow(0 0 3px rgba(232,85,59,.7))}
+  .cta-truck svg{width:30px}.foot-truck svg{width:21px}
 </style>
 </head>
 <body>
@@ -1769,6 +1775,7 @@
     <div class="cta-left">
       <div class="velo-logo on-light">
         <img src="assets/LOGO.png" alt="Grupo Velo">
+        <div class="cta-truck" aria-hidden="true"><svg viewBox="0 0 64 40"><rect x="3" y="6" width="35" height="22" rx="2.5" fill="currentColor"/><path d="M38 12 h9 a3 3 0 0 1 2.3 1.1 L54 20.5 a3 3 0 0 1 .7 1.9 V28 H38 Z" fill="currentColor"/><path d="M41 14.5 h4.6 l3.4 4.8 H41 Z" fill="rgba(255,255,255,.9)"/><circle cx="15" cy="30.5" r="5.6" fill="#15151a"/><circle cx="45" cy="30.5" r="5.6" fill="#15151a"/></svg></div>
       </div>
       <h2 class="cta-title">Operação séria<br>começa com <strong>uma conversa.</strong></h2>
       <p class="cta-sub">
@@ -1805,6 +1812,7 @@
       <div class="footer-brand">
         <div class="velo-logo on-dark">
           <img src="assets/LOGO.png" alt="Grupo Velo">
+          <div class="foot-truck" aria-hidden="true"><svg viewBox="0 0 64 40"><rect x="3" y="6" width="35" height="22" rx="2.5" fill="currentColor"/><path d="M38 12 h9 a3 3 0 0 1 2.3 1.1 L54 20.5 a3 3 0 0 1 .7 1.9 V28 H38 Z" fill="currentColor"/><path d="M41 14.5 h4.6 l3.4 4.8 H41 Z" fill="rgba(255,255,255,.9)"/><circle cx="15" cy="30.5" r="5.6" fill="#15151a"/><circle cx="45" cy="30.5" r="5.6" fill="#15151a"/></svg></div>
         </div>
         <p>Grupo operacional com quatro empresas em Brasília. Distribuição veterinária, varejo pet, hortifruti e mentoria comercial — sob o mesmo código de execução: O Protocolo.</p>
       </div>
