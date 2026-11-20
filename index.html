@@ -1103,7 +1103,7 @@
   @media (max-width: 768px) {
     nav { padding: 0 20px; }
     .nav-links { gap: 16px; }
-    .nav-links li:not(:last-child) { display: none; }
+    .nav-links li:not(:last-child):not(.nav-vagas) { display: none; }
     #hero, #stats, #manifesto, #protocolo, #ecossistema, #time, #prova, #principios, #cta, footer {
       padding-left: 20px; padding-right: 20px;
     }
@@ -1213,6 +1213,17 @@
   .vaga-btn:hover { background: var(--coral-d); transform: translateY(-1px); }
   .vaga-seguro { font-size: 13px; color: rgba(244,241,236,0.6); }
   @media (max-width: 900px) { .vagas-inner { grid-template-columns: minmax(0,1fr); gap: 32px; } #vagas { padding: 64px 0; } .vaga-card { padding: 24px; } }
+
+  /* selo de vaga aberta no topo + item Vagas no menu */
+  .nav-vagas a { color: var(--coral) !important; font-weight: 600; }
+  .nav-vagas-n { display: inline-grid; place-items: center; min-width: 18px; height: 18px; border-radius: 9px; background: var(--coral); color: #fff; font-size: 11px; font-weight: 700; margin-left: 4px; padding: 0 5px; }
+  .hero-vaga { display: inline-flex; align-items: center; gap: 10px; flex-wrap: wrap; max-width: 100%; margin: 0 0 22px; padding: 8px 10px 8px 14px; border-radius: 999px; background: #fff; border: 1.5px solid var(--coral); text-decoration: none; color: var(--ink); box-shadow: 0 8px 24px -14px rgba(232,85,59,.6); transition: transform .2s var(--ease), box-shadow .2s var(--ease); position: relative; z-index: 2; }
+  .hero-vaga:hover { transform: translateY(-1px); box-shadow: 0 12px 28px -14px rgba(232,85,59,.75); }
+  .hv-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--coral); animation: pulse 2s ease-in-out infinite; }
+  .hv-tag { font-family: var(--head); font-size: 12px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--coral); }
+  .hv-txt { font-family: var(--head); font-size: 15px; font-weight: 600; }
+  .hv-go { background: var(--coral); color: #fff; font-family: var(--head); font-size: 13px; font-weight: 600; padding: 6px 12px; border-radius: 999px; }
+  @media (max-width: 560px) { .hero-vaga { border-radius: 16px; gap: 6px 10px; } .hv-txt { font-size: 14px; flex-basis: 100%; order: 3; } .hv-go { order: 4; } }
 </style>
 </head>
 <body>
@@ -1236,7 +1247,7 @@
     <li><a href="#desafio">Desafio</a></li>
     <li><a href="#time">Time</a></li>
     <li><a href="#prova">Clientes</a></li>
-    <li><a href="#vagas">Vagas</a></li>
+    <li class="nav-vagas"><a href="#vagas">Vagas <span class="nav-vagas-n">1</span></a></li>
     <li><a href="#cta" class="nav-cta">Falar com a gente</a></li>
   </ul>
 </nav>
@@ -1246,6 +1257,9 @@
   <div class="hero-grid-bg"></div>
   <div class="hero-streaks"></div>
   <div class="hero-content">
+    <a class="hero-vaga" href="https://vagas.grupovelo.com.br" target="_blank" rel="noopener">
+      <span class="hv-dot"></span><span class="hv-tag">Vaga aberta</span><span class="hv-txt">Controller | Gestor(a) Financeiro(a)</span><span class="hv-go">Ver vaga →</span>
+    </a>
     <div class="hero-meta">
       <span class="dot"></span>
       <span>Brasília · DF</span>
