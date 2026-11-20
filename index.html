@@ -1196,6 +1196,23 @@
   .foot-truck{offset-path:path('M 75 -16 L 75 54 L 103 54 A 13 13 0 0 0 103 27 A 13 13 0 0 0 103 54 L 164 54')}
   .cta-truck svg,.foot-truck svg{display:block;filter:drop-shadow(0 0 3px rgba(232,85,59,.7))}
   .cta-truck svg{width:30px}.foot-truck svg{width:21px}
+
+  /* ===== TRABALHE CONOSCO ===== */
+  #vagas { background: var(--petrol, #0F3B38); color: #F4F1EC; padding: 96px 0; }
+  .vagas-inner { max-width: 1200px; margin: 0 auto; padding: 0 max(24px, env(safe-area-inset-left, 0px)); display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1.1fr); gap: 56px; align-items: center; }
+  #vagas .section-title { color: #F4F1EC; }
+  #vagas .section-sub { color: rgba(244,241,236,0.75); margin-top: 18px; }
+  .vaga-card { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.16); border-radius: 18px; padding: 32px; display: grid; gap: 16px; }
+  .vaga-tag { display: inline-flex; align-items: center; gap: 8px; font-family: var(--head); font-size: 12px; letter-spacing: .12em; text-transform: uppercase; color: var(--coral); }
+  .vaga-tag i { width: 8px; height: 8px; border-radius: 50%; background: var(--coral); animation: pulse 2s ease-in-out infinite; }
+  .vaga-titulo { font-family: var(--head); font-size: clamp(26px, 3vw, 36px); line-height: 1.1; margin: 0; color: #fff; }
+  .vaga-lista { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+  .vaga-lista li { display: flex; gap: 12px; align-items: flex-start; font-size: 16px; color: rgba(244,241,236,0.9); }
+  .vaga-lista li b { color: var(--coral); }
+  .vaga-btn { background: var(--coral); color: #fff; border: 0; padding: 18px 28px; border-radius: 6px; font-family: var(--head); font-weight: 600; font-size: 16px; text-decoration: none; display: inline-flex; align-items: center; justify-content: center; gap: 12px; transition: all .25s var(--ease); }
+  .vaga-btn:hover { background: var(--coral-d); transform: translateY(-1px); }
+  .vaga-seguro { font-size: 13px; color: rgba(244,241,236,0.6); }
+  @media (max-width: 900px) { .vagas-inner { grid-template-columns: minmax(0,1fr); gap: 32px; } #vagas { padding: 64px 0; } .vaga-card { padding: 24px; } }
 </style>
 </head>
 <body>
@@ -1219,6 +1236,7 @@
     <li><a href="#desafio">Desafio</a></li>
     <li><a href="#time">Time</a></li>
     <li><a href="#prova">Clientes</a></li>
+    <li><a href="#vagas">Vagas</a></li>
     <li><a href="#cta" class="nav-cta">Falar com a gente</a></li>
   </ul>
 </nav>
@@ -1774,6 +1792,28 @@
 
 
 <!-- ═══════════════ CTA FINAL ═══════════════ -->
+<section id="vagas">
+  <div class="vagas-inner">
+    <div class="reveal">
+      <div class="eyebrow on-dark">Trabalhe conosco</div>
+      <h2 class="section-title">O grupo está crescendo. <strong>Venha crescer com a gente.</strong></h2>
+      <p class="section-sub">Somos quatro empresas em Brasília, com o mesmo jeito de trabalhar: método, número na mesa e decisão rápida. Quando abrimos uma vaga, ela aparece aqui, e a candidatura é feita pelo nosso sistema oficial.</p>
+    </div>
+    <div class="vaga-card reveal">
+      <span class="vaga-tag"><i></i>Vaga aberta</span>
+      <h3 class="vaga-titulo">Controller | Gestor(a) Financeiro(a)</h3>
+      <ul class="vaga-lista">
+        <li><b>→</b>PJ R$ 7.000 + R$ 1.000 de ajuda de custo</li>
+        <li><b>→</b>Bônus por resultados em dezembro de 2027</li>
+        <li><b>→</b>IA como ferramenta principal de trabalho</li>
+        <li><b>→</b>100% presencial em Brasília/DF</li>
+      </ul>
+      <a class="vaga-btn" href="https://vagas-brasilia.pages.dev/vaga/controller" target="_blank" rel="noopener">Quero me candidatar <span>→</span></a>
+      <span class="vaga-seguro">Link oficial do Grupo Velo. A candidatura leva poucos minutos.</span>
+    </div>
+  </div>
+</section>
+
 <section id="cta">
   <div class="cta-inner">
     <div class="cta-left">
